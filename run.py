@@ -18,8 +18,8 @@ def findLangFilesInMods(modFolder, langTag, logFile):
             modDir = os.path.join(modFolder, mod)
             zip = zipfile.ZipFile(modDir, "r")
             filedirs = list(zip.NameToInfo.keys())
-            for filedirs in filedirs:
-                if langTag in filedirs:
+            for filedir in filedirs:
+                if langTag in filedir:
                     log(mod, logFile)
                     break
 
